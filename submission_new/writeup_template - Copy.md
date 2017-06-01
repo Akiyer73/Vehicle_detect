@@ -15,8 +15,8 @@ The goals / steps of this project are the following:
 * Estimate a bounding box for vehicles detected.
 
 [//]: # (Image References)
-![Car Image]['./output_images/car.jpg']
-![Not-Car Image]['./output_images/notcar.jpg']
+[Car Image]: ./output_images/car.jpg
+[Not-Car Image]: ./output_images/notcar.jpg
 [image3]: ./examples/sliding_windows.jpg
 [image4]: ./examples/sliding_window.jpg
 [image5]: ./examples/bboxes_and_heat.png
@@ -45,8 +45,8 @@ There are five folders of Vehicle images and these were gathered in a matrice na
 There are two folders of non-Vehicle images and these were gathered in a matrix named non-cars using the glob function. The code is in the fifth cell of the ipynb notebook.
 There are 8792 cars and 8968 non car images.
 
-![Car Image]['./output_images/car.jpg']
-![Not-Car Image]['./output_images/notcar.jpg']
+[Car Image]:[./output_images/car.jpg]
+[Not-Car Image]:[./output_images/notcar.jpg]
 
 I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 
@@ -79,30 +79,30 @@ Then using svc.fit, we trained a svc model.
 
 I chose an image area of ystart = 400 ystop = 656, to search for cars. Thereafter using the find cars function, where we search in windows of 64 to find the cars.
 
-![bbox1 for test1 image]['./output_images/bbox0.jpg']
-![bbox1 for test2 image]['./output_images/bbox1.jpg']
-![bbox1 for test3 image]['./output_images/bbox2.jpg']
-![bbox1 for test4 image]['./output_images/bbox3.jpg']
-![bbox1 for test5 image]['./output_images/bbox4.jpg']
-![bbox1 for test6 image]['./output_images/bbox5.jpg']
+[bbox1 for test1 image]:[./output_images/bbox0.jpg]
+[bbox1 for test2 image]:[./output_images/bbox1.jpg]
+[bbox1 for test3 image]:[./output_images/bbox2.jpg]
+[bbox1 for test4 image]:[./output_images/bbox3.jpg]
+[bbox1 for test5 image]:[./output_images/bbox4.jpg]
+[bbox1 for test6 image]:[./output_images/bbox5.jpg]
 
 ####2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
 Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. Applying heatmap to the images gave us the final boxes.  Here are some example images:
 
-![for test1 image]['./output_images/heatmap0.jpg']
-![for test2 image]['./output_images/heatmap1.jpg']
-![for test3 image]['./output_images/heatmap2.jpg']
-![for test4 image]['./output_images/heatmap3.jpg']
-![for test5 image]['./output_images/heatmap4.jpg']
-![for test6 image]['./output_images/heatmap5.jpg']
+[for test1 image]:[./output_images/heatmap0.jpg]
+[for test2 image]:[./output_images/heatmap1.jpg]
+[for test3 image]:[./output_images/heatmap2.jpg]
+[for test4 image]:[./output_images/heatmap3.jpg]
+[for test5 image]:[./output_images/heatmap4.jpg]
+[for test6 image]:[./output_images/heatmap5.jpg]
 
-![for test1 image]['./output_images/carbox0.jpg']
-![for test2 image]['./output_images/carbox1.jpg']
-![for test3 image]['./output_images/carbox2.jpg']
-![for test4 image]['./output_images/carbox3.jpg']
-![for test5 image]['./output_images/carbox4.jpg']
-![for test6 image]['./output_images/carbox5.jpg']
+[for test1 image]:[./output_images/carbox0.jpg]
+[for test2 image]:[./output_images/carbox1.jpg]
+[for test3 image]:[./output_images/carbox2.jpg]
+[for test4 image]:[./output_images/carbox3.jpg]
+[for test5 image]:[./output_images/carbox4.jpg]
+[for test6 image]:[./output_images/carbox5.jpg]
 
 ---
 
@@ -122,29 +122,29 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ### Here are six frames and their corresponding heatmaps:
 
-![Raw heatmap]['./output_images/V_heatmap724.jpg']
-![Raw heatmap]['./output_images/V_heatmap725.jpg']
-![Raw heatmap]['./output_images/V_heatmap726.jpg']
-![Raw heatmap]['./output_images/V_heatmap727.jpg']
-![Raw heatmap]['./output_images/V_heatmap728.jpg']
-![Raw heatmap]['./output_images/V_heatmap729.jpg']
+![Raw heatmap][./output_images/V_heatmap724.jpg]
+![Raw heatmap][./output_images/V_heatmap725.jpg]
+![Raw heatmap][./output_images/V_heatmap726.jpg]
+![Raw heatmap][./output_images/V_heatmap727.jpg]
+![Raw heatmap][./output_images/V_heatmap728.jpg]
+![Raw heatmap][./output_images/V_heatmap729.jpg]
 
 ### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
-![avg heatmap]['./output_images/V_avg_heatmap724.jpg']
-![avg heatmap]['./output_images/V_avg_heatmap725.jpg']
-![avg heatmap]['./output_images/V_avg_heatmap726.jpg']
-![avg heatmap]['./output_images/V_avg_heatmap727.jpg']
-![avg heatmap]['./output_images/V_avg_heatmap728.jpg']
-![avg heatmap]['./output_images/V_avg_heatmap729.jpg']
+![avg heatmap][./output_images/V_avg_heatmap724.jpg]
+![avg heatmap][./output_images/V_avg_heatmap725.jpg]
+![avg heatmap][./output_images/V_avg_heatmap726.jpg]
+![avg heatmap][./output_images/V_avg_heatmap727.jpg]
+![avg heatmap][./output_images/V_avg_heatmap728.jpg]
+![avg heatmap][./output_images/V_avg_heatmap729.jpg]
 
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series
-![avg bbox]['./output_images/V_carbox724.jpg']
-![avg bbox]['./output_images/V_carbox725.jpg']
-![avg bbox]['./output_images/V_carbox726.jpg']
-![avg bbox]['./output_images/V_carbox727.jpg']
-![avg bbox]['./output_images/V_carbox728.jpg']
-![avg bbox]['./output_images/V_carbox729.jpg']
+![avg bbox][./output_images/V_carbox724.jpg]
+![avg bbox][./output_images/V_carbox725.jpg]
+![avg bbox][./output_images/V_carbox726.jpg]
+![avg bbox][./output_images/V_carbox727.jpg]
+![avg bbox][./output_images/V_carbox728.jpg]
+![avg bbox][./output_images/V_carbox729.jpg]
 
 ###Discussion
 
